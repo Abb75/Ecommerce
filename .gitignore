@@ -1,0 +1,14 @@
+# Ignore .env files
+Frontend/.env
+
+# Ignore node_modules and related files in Frontend
+Frontend/node_modules
+Frontend/.pnp
+Frontend.pnp.js
+
+# Ignore specific files in Frontend
+Frontend.DS_Store
+Frontend.env.local
+Frontend.env.development.local
+Frontend.env.test.local
+Frontend.env.production.local
