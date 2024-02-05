@@ -132,7 +132,7 @@ const Registration = () => {
                   required
                   fullWidth
                   id="email"
-                  label="Email Address"
+                  label="Email"
                   name="email"
                   autoComplete="email"
                   onChange={handleChange}
@@ -207,7 +207,7 @@ const Registration = () => {
                   required
                   fullWidth
                   id="postcode"
-                  label="postcode"
+                  label="Postcode"
                   name="postcode"
                   autoComplete='off'
                   onChange={handleChange}
@@ -219,7 +219,7 @@ const Registration = () => {
                   required
                   fullWidth
                   id="phone"
-                  label="phone"
+                  label="Phone"
                   name="phone"
                   autoComplete="phone"
                   onChange={handleChange}
@@ -233,7 +233,7 @@ const Registration = () => {
                   required
                   fullWidth
                   id="city"
-                  label="city"
+                  label="City"
                   autoFocus
                   onChange={handleChange}
                   defaultValue={city}
@@ -241,12 +241,7 @@ const Registration = () => {
               </Grid>
              
             
-              <Grid item xs={12}>
-                <FormControlLabel
-                  control={<Checkbox value="allowExtraEmails" color="primary" />}
-                  label="I want to receive inspiration, marketing promotions and updates via email."
-                />
-              </Grid>
+            
             </Grid>
             <Button
               type="submit"
