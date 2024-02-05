@@ -2,7 +2,7 @@
 Frontend/.env
 
 # Ignore node_modules and related files in Frontend
-Frontend/node_modules/
+Frontend/eshop/node_modules/
 Frontend/.pnp
 Frontend.pnp.js
 
