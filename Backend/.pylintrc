@@ -1,8 +1,0 @@
-[MASTER]
-# Charge le plugin pylint-django
-load-plugins=pylint_django
-
-[MESSAGES CONTROL]
-# Désactive certains avertissements spécifiques à Django
-disable=missing-module-docstring,missing-class-docstring,missing-function-docstring,no-member,import-error
-
