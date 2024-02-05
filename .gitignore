@@ -3,6 +3,9 @@ Frontend/.env
 
 # Ignore node_modules and related files in Frontend
 Frontend/node_modules/
+Frontend/package-lock.json/
+Frontend/package.json/
+
 Frontend/.np
 Frontend.pnp.js
 
