@@ -2,13 +2,13 @@
 Frontend/.env
 
 # Ignore node_modules and related files in Frontend
-Frontend/node_modules
+Frontend/eshop/node_modules
 Frontend/.pnp
 Frontend.pnp.js
 
 # Ignore specific files in Frontend
 Frontend.DS_Store
-Frontend.env.local
-Frontend.env.development.local
-Frontend.env.test.local
-Frontend.env.production.local
+Frontend.eshop.env.local
+Frontend.eshop.env.development.local
+Frontend.eshop.env.test.local
+Frontend.eshop.env.production.local
