@@ -20,12 +20,10 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 import stripe
-from stripe.api_resources import payment_method
 
-from order.models import Order
+from decouple import config
 
-stripe.api_key = 'sk_test_51Jyg7eGk75zbcxVe1clNVNbhNAATOVvuC0xuz6RST5pKtIPVSETBBeJHO9ReQM0t8gqfco9xJJ6LlaREWKHPGCnk00Zofrs8Un'
-
+stripe.api_key = config('STRIPE_API_KEY')
 
 @api_view(['POST'])
 def create_payment(request):

@@ -4,5 +4,4 @@ from .views import create_payment
 
 urlpatterns = [
   path('create-payment-intent/',create_payment, name='create-checkout')
-
 ]

@@ -1,7 +1,4 @@
 from rest_framework import serializers
-from rest_framework.decorators import permission_classes
-from rest_framework.permissions import IsAuthenticated
-
 from users.serializers import UserSerializer
 from .models import Order, OrderItem
 
