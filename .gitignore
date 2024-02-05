@@ -1,5 +1,5 @@
 # Ignore .env files
-Frontend/.env
+Frontend/eshop/.env
 
 # Ignore node_modules and related files in Frontend
 Frontend/eshop/node_modules/
