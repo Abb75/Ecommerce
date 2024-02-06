@@ -5,7 +5,7 @@ from django.views.decorators.vary import vary_on_cookie
 from rest_framework import viewsets
 from django.http import JsonResponse
 
-from .serializers import ListProduct, ListImageProductSerializer
+from .serializers import ListProduct
 from .models import Products
 from rest_framework.permissions import IsAuthenticatedOrReadOnly, AllowAny, IsAuthenticated
 from rest_framework.parsers import MultiPartParser, FormParser
