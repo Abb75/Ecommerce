@@ -48,7 +48,7 @@ export const createOrderUser =  (order) => async(dispatch, getState) => {
             }
 
         } 
-        const {data} = await axios.post(`http://127.0.0.1:8000/api/order/add/`,order,config )
+        const {data} = await axios.post(process.env.REACT_APP_API_URL + 'order/add/' ,order,config )
         
 
         dispatch({
@@ -87,7 +87,7 @@ export const payOrder =  (id) => async(dispatch, getState) => {
             }
 
         }
-        const {data} = await axios.put(`http://127.0.0.1:8000/api/order/${id}/pay/`,
+        const {data} = await axios.put(process.env.REACT_APP_API_URL + `order/${id}/pay/`,
         userId,
         config)
             
@@ -143,7 +143,7 @@ export const getOrderDetails =  (id) => async(dispatch, getState) => {
             }
 
         }
-        const {data} = await axios.get(`http://127.0.0.1:8000/api/order/${id}/`,config,
+        const {data} = await axios.get(process.env.REACT_APP_API_URL + `order/${id}/`,config,
         userId)
             
         
@@ -177,7 +177,7 @@ export const getOrderList =  () => async(dispatch, getState) => {
             }
 
         }
-        const {data} = await axios.get(`http://127.0.0.1:8000/api/order/order_history/`,config,
+        const {data} = await axios.get(process.env.REACT_APP_API_URL + `order/order_history/`,config,
        getUserId
        )
             
@@ -214,7 +214,7 @@ export const getAllOrderItemsByOrder =  (id) => async(dispatch, getState) => {
             }
 
         }
-        const {data} = await axios.get(`http://127.0.0.1:8000/api/order/${id}/`,config,
+        const {data} = await axios.get(process.env.REACT_APP_API_URL + `order/${id}/`,config,
         userId)
             
         

@@ -17,7 +17,7 @@ export const getAllProductFromApi = () => async(dispatch) => {
 
         dispatch({ 
             type:PRODUCT_LIST_REQUEST})
-            const {data} = await axios.get('http://127.0.0.1:8000/api/product/')
+            const {data} = await axios.get(process.env.REACT_APP_API_URL + 'product/')
           
         dispatch({ 
             type: PRODUCT_LIST_SUCCESS,
@@ -44,7 +44,7 @@ export const getListProductDetails = (id) => async(dispatch) => {
 
         dispatch({ 
             type:PRODUCT_DETAILS_REQUEST})
-            const {data} = await axios.get(`http://127.0.0.1:8000/api/product/${id}`)
+            const {data} = await axios.get(process.env.REACT_APP_API_URL + `product/${id}`)
             
         dispatch({ 
             type: PRODUCT_DETAILS_SUCCESS,

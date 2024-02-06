@@ -23,7 +23,7 @@ export const CreatePayment =  () => async(dispatch, getState) => {
             }
         }
       
-        const {data} = await axios.post('http://127.0.0.1:8000/api/stripe/payment/',config )
+        const {data} = await axios.post(process.env.REACT_APP_API_URL + 'stripe/payment/',config )
           
 
         dispatch({

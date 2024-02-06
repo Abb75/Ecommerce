@@ -11,7 +11,7 @@ export const addToCart = (id, quantity) => async(dispatch) => {
     
    
 
-    const {data} = await axios.get(`http://127.0.0.1:8000/api/product/${id}`)
+    const {data} = await axios.get(process.env.REACT_APP_API_URL + `product/${id}`)
     dispatch({
         type: CART_ADD_ITEM,
         payload: {

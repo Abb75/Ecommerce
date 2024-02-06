@@ -39,7 +39,7 @@ export const login = (email, password) => async(dispatch) => {
         dispatch({
         type: USER_LOGIN_REQUEST
     })
-    const {data} = await  axiosInstance.post(`http://127.0.0.1:8000/api/token/`, {
+    const {data} = await  axiosInstance.post(process.env.REACT_APP_API_URL + `token/`, {
         email: email,
         password: password
         })
@@ -86,7 +86,7 @@ export const logout = () => async(dispatch, getState) => {
 
         } 
        
-        const response = axiosInstance.post('http://127.0.0.1:8000/api/user/logout/blacklist/' ,config,{
+        const response = axiosInstance.post(process.env.REACT_APP_API_URL + 'user/logout/blacklist/' ,config,{
             refresh_token : localStorage.getItem('refresh_token') , 
             
         });
@@ -145,7 +145,7 @@ export const register = (email,
         dispatch({
         type: USER_REGISTER_REQUEST
     })
-    const {data} = axiosInstance.post('http://127.0.0.1:8000/api/user/register/', {
+    const {data} = axiosInstance.post(process.env.REACT_APP_API_URL + 'user/register/', {
         email: email,
         first_name: first_name,
         last_name: last_name, 
@@ -193,7 +193,7 @@ export const getUsersDetails =  (id) => async(dispatch, getState) => {
         console.log(userId)
         const config = {
             method: 'get',
-            url: `http://127.0.0.1:8000/api/user/${id}/`,
+            url: process.env.REACT_APP_API_URL + `user/${id}/`,
             headers: {
                 'Content-type':  'application/json',
                 Authorization: `Bearer ${userInfo.token}`
@@ -241,7 +241,7 @@ export const updateUsersProfile =  (user) => async(dispatch, getState) => {
         
         
 
-        const {data} = await axios.put(`http://127.0.0.1:8000/api/user/account-update/`, user, config )
+        const {data} = await axios.put(process.env.REACT_APP_API_URL + 'user/account-update/', user, config )
         console.log(data)
         dispatch({
             type: USER_UPDATE_PROFILE_SUCCESS,
@@ -292,7 +292,7 @@ export const updatePasswordUser =  (user) => async(dispatch, getState) => {
             }
 
         }
-        const {data} = await axios.put(`http://127.0.0.1:8000/api/user/account-update-password/`, user, config )
+        const {data} = await axios.put(process.env.REACT_APP_API_URL + 'user/account-update-password/', user, config )
        
         dispatch({
             type: USER_PASSWORD_RESET_SUCCESS,
@@ -327,7 +327,7 @@ export const getUsersList =  () => async(dispatch, getState) => {
             }
 
         }
-        const {data} = await axios.get(`http://127.0.0.1:8000/api/users/`, config )
+        const {data} = await axios.get(process.env.REACT_APP_API_URL + 'users/', config )
        
         dispatch({
             type: USERS_LIST_SUCCESS,
