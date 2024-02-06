@@ -24,5 +24,5 @@ class ListImagesProductViewSet(viewsets.ModelViewSet):
     queryset = Products.objects.all()
 
     def get_queryset(self):
-        return Products.objects.exclude(image__isnull=True)
+        return Products.objects.all()
   
