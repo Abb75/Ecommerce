@@ -40,21 +40,7 @@ export const getAllProductFromApi = () => async(dispatch) => {
         }
 
 
-    export const getListImagesProductFromApi = async() => {
-        try {
     
-          
-            const {data} = await axios.get(process.env.REACT_APP_API_URL + 'product/images')
-                
-            console.log(data)
-                
-            } catch(error) {
-                console.log(error)
-            
-    
-    
-                }
-            }
         
 
 export const getListProductDetails = (id) => async(dispatch) => {

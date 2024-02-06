@@ -53,7 +53,6 @@ const Img = styled('img')({
 
    // const [showListProduct, setShowListProduct] = useState()
     //const [loader, setLoader] = useState(false)
-  console.log(getListImagesProductFromApi())
 
     useEffect(() => {
       dispatch(getAllProductFromApi())
