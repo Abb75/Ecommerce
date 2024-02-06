@@ -21,8 +21,8 @@ class ListProductViewSet(viewsets.ModelViewSet):
 
 class ListImagesProductViewSet(viewsets.ModelViewSet):
     serializer_class = ListImageProductSerializer
-    queryset = Products.objects.exclude(image__isnull=True)
+    queryset = Products.objects.all()
 
-    def list(self, request, *args, **kwargs):
-        serializer = self.get_serializer(self.queryset, many=True)
-        return JsonResponse(serializer.data, safe=False)
+    def get_queryset(self):
+        return Products.objects.exclude(image__isnull=True)
+  
