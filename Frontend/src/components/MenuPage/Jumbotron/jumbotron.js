@@ -9,7 +9,7 @@ export const  Jumbotron = () => {
           className="d-block w-100"
           height={'500px'}
           width= {'500px'}
-          src="http://127.0.0.1:8000/media/photo/Odinateur_o6sYyJh.jpg"
+          src= {process.env.REACT_APP_API_URL + "photo/Odinateur_o6sYyJh.jpg"}
           alt="First slide"
         />
         <Carousel.Caption>
@@ -21,7 +21,7 @@ export const  Jumbotron = () => {
         height={'500px'}
           width= {'50px'}
           className="d-block w-100"
-          src="http://127.0.0.1:8000/media/photo/pexels-pixabay-38568.jpg"   
+          src={process.env.REACT_APP_API_URL + "photo/pexels-pixabay-38568.jpg"} 
           alt="Second slide"
         />
 
@@ -34,7 +34,7 @@ export const  Jumbotron = () => {
         height={'500px'}
        
           className="d-block w-100"
-          src="http://127.0.0.1:8000/media/photo/pexels-toni-cuenca-585752.jpg"
+          src={process.env.REACT_APP_API_URL + "photo/pexels-toni-cuenca-585752.jpg"}
           alt="Third slide"
         />
 
@@ -47,7 +47,7 @@ export const  Jumbotron = () => {
         height={'500px'}
        
           className="d-block w-100"
-          src="http://127.0.0.1:8000/media/photo/pexels-kaboompics-com-6416.jpg"
+          src={process.env.REACT_APP_API_URL + "photo/pexels-kaboompics-com-6416.jpg"}
           alt="Third slide"
         />
 
