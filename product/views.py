@@ -19,10 +19,3 @@ class ListProductViewSet(viewsets.ModelViewSet):
     permission_classes = [AllowAny]
 
 
-class ListImagesProductViewSet(viewsets.ModelViewSet):
-    serializer_class = ListImageProductSerializer
-    queryset = Products.objects.all()
-
-    def get_queryset(self):
-        return Products.objects.all()
-  
