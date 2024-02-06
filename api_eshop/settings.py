@@ -199,5 +199,5 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
 }
 
-MEDIA_ROOT = '/opt/render/project/src/'
+MEDIA_ROOT = 'media/photo/'
 MEDIA_URL = '/media/'
