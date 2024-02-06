@@ -12,7 +12,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 import os
 from datetime import timedelta
 from pathlib import Path
-
+from decouple import config
+import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 from django.conf import settings
 
@@ -84,14 +85,15 @@ WSGI_APPLICATION = 'api_eshop.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'shopping',
-        'USER': 'postgres',
-        'PASSWORD': 'muaythai',
-        #'HOST': 'db',
-        #'PORT': '5432'
-    }
+  'default': {
+    'ENGINE': 'django.db.backends.postgresql',
+    'NAME': 'Ecommerce_db',
+    'USER': 'Abb75',
+    'PASSWORD': 'Lat8Jf9dkron',
+    'HOST': 'ep-lingering-night-a2g3ba1x.eu-central-1.aws.neon.tech',
+    'PORT': '5432',
+    'OPTIONS': {'sslmode': 'require'},
+  }
 }
 
 # Password validation
