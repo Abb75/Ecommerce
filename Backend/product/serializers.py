@@ -8,3 +8,10 @@ class ListProduct(serializers.ModelSerializer):
     class Meta:
         model = Products
         fields = ['id', 'slug','image', 'title', 'price', 'category', 'description', 'stock']
+
+class ListImageProductSerializer(serializers.ModelSerializer):
+    image = serializers.ImageField(required=False)
+    class Meta:
+        model = Products
+        fields = ['id', 'image']
+

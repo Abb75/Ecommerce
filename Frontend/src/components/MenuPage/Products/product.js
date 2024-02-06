@@ -34,7 +34,7 @@ import { Figure } from "react-bootstrap";
 import { styled } from '@mui/material/styles';
 import { LinkContainer } from "react-router-bootstrap";
 
-
+import { getListImagesProductFromApi } from "../../../redux/actions/productActions";
 
 
 
@@ -53,7 +53,7 @@ const Img = styled('img')({
 
    // const [showListProduct, setShowListProduct] = useState()
     //const [loader, setLoader] = useState(false)
-
+  console.log(getListImagesProductFromApi())
 
     useEffect(() => {
       dispatch(getAllProductFromApi())
