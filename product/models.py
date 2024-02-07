@@ -21,7 +21,7 @@ class Category(models.Model):
 
 class Products(models.Model):
     #user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True)
-    image = models.ImageField(upload_to="photo/")
+    image = models.ImageField()
     title = models.CharField(max_length=120, null=False)
     price = models.FloatField()
     slug = models.SlugField()
